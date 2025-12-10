@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Robert H.C. Seidel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-grid-equal {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .gallery-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-card:hover {
+            border-color: var(--accent-electric);
+            box-shadow: 0 0 40px rgba(0,212,255,0.1);
+        }
+        
+        .gallery-card-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: var(--bg-secondary);
+        }
+        
+        .gallery-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        
+        .gallery-card:hover .gallery-card-image img {
+            transform: scale(1.02);
+        }
+        
+        .gallery-card-content {
+            padding: 1.5rem;
+        }
+        
+        .gallery-card-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            color: var(--accent-electric);
+        }
+        
+        .gallery-card-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid-equal {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    
+    <nav>
+        <a href="index.html" class="logo">R.SEIDEL</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+        <a href="mailto:jobwithrobert.electric@gmail.com" class="nav-contact">Contact Me</a>
+    </nav>
+
+    <section class="page-header" style="padding-left: 8%; padding-right: 8%;">
+        <h1>MY CURRENT PROJECTS</h1>
+        <p>Real work, real results. A visual showcase of my electrical and automation projects.</p>
+    </section>
+
+    <section>
+        <div class="gallery-grid-equal">
+            
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/welding-hall.jpg" alt="Industrial Welding Hall Interior">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">18,300 SQ FT INDUSTRIAL HALL</h3>
+                    <p class="gallery-card-description">This industrial hall was fully planned and wired by me, including load calculations, distribution design and complete installation. The project included three-phase systems, high-load circuits for machinery, cable-tray routing, lighting layout and planning for future expansions. All work executed to commercial standards for reliability, safety and long-term durability.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/hall-exterior-night.jpg" alt="Welding Hall Exterior at Night">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">EXTERIOR LIGHTING & POWER</h3>
+                    <p class="gallery-card-description">The exterior was equipped with a complete lighting and power system designed and installed by me. Scope included weatherproof LED fixtures, protected cable routing, outdoor distribution points and integration of all exterior loads into the central electrical concept. Built for safe visibility and reliable operation in harsh conditions.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/hall-ceiling.jpg" alt="Industrial Hall Ceiling Structure">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">HIGH-BAY LIGHTING SYSTEM</h3>
+                    <p class="gallery-card-description">The high-bay lighting system was completely planned and installed by me. Layout includes energy-efficient LED fixtures, uniform spacing for consistent light distribution and dedicated circuits sized for industrial loads. All wiring routed along the steel structure with clean, service-friendly design supporting long operating hours and future expansion.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/main-distribution.jpg" alt="Main Electrical Distribution">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">TRANSFORMER STATION</h3>
+                    <p class="gallery-card-description">I executed the complete low-voltage side installation, including high-capacity feeders, NH fuse switch units, busbar systems and metering equipment. The station provides stable transition from medium voltage to the building's internal distribution. All components dimensioned for heavy industrial loads with safe maintenance access.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/main-disconnect.jpg" alt="400A Main Disconnect Switch">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">HIGH-CAPACITY FEEDER UNITS</h3>
+                    <p class="gallery-card-description">This section shows the 300 mm² feeder units I installed, corresponding roughly to 600-700 kcmil in US sizing. Used for heavy industrial service entrances and high-load distribution. Installation includes mechanically secured lugs, protected cable routing and modular enclosure system designed for safe access under continuous high current.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/distribution-panels.jpg" alt="Distribution Panel Array">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">DISTRIBUTION WALL</h3>
+                    <p class="gallery-card-description">Complete low-voltage circuit system for the facility. I installed and organized all outgoing circuits on modular distribution units, including lighting, machinery feeds, socket circuits and dedicated equipment lines. Cabling routed cleanly over cable trays, bundled for load groups and prepared for clear identification and maintenance.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/cee-outlets.jpg" alt="CEE Industrial Outlets">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">CEE OUTLET PANELS</h3>
+                    <p class="gallery-card-description">One of the CEE outlet panels I installed throughout the facility. The unit provides both 230V and three-phase 400V connections for machinery, tools and temporary equipment. All outlets protected inside a compact enclosure with integrated circuit breakers, mounted on steel structure for stability and easy access.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/touch-control-panels.jpg" alt="Touch Control Panels">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">SMART CONTROL SYSTEM</h3>
+                    <p class="gallery-card-description">Custom smart control system I developed and installed. Left display shows the ESP-based weather station monitoring wind and rain conditions for automatic window control. Right display provides lighting control for all zones. Built on ESP microcontrollers, touch displays and custom web-app backend, integrating modern IoT into an industrial environment.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/solar-inverter.jpg" alt="SolaX Inverter System">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">RESIDENTIAL PV STORAGE</h3>
+                    <p class="gallery-card-description">Complete residential PV storage system I installed with Solax hybrid inverter and modular high-voltage battery unit. Installation includes clean cable routing, DC and AC protection, communication wiring and full integration into the home's electrical system. Provides energy storage, backup capability and optimized self-consumption.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/ev-charger.jpg" alt="EV Wallbox Installation">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">EV WALLBOX INSTALLATION</h3>
+                    <p class="gallery-card-description">Outdoor Huawei EV wallbox I installed, mounted on concrete boundary panel and wired through protected conduit for durability. Fully integrated into the property's electrical system, providing safe and reliable AC charging for residential use. Weatherproof, discreet and positioned for convenient vehicle access.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/network-rack.jpg" alt="Structured Network Rack">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">STRUCTURED NETWORK CABINET</h3>
+                    <p class="gallery-card-description">Structured network cabinet I installed with organized patch panel, Cat-cables, coax distribution and managed Ethernet switch. All connections routed cleanly with defined cable paths for stability, easy troubleshooting and long-term reliability. Provides solid backbone for high-speed data, IPTV and internet services.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-image">
+                    <img src="images/hall-interior-door.jpg" alt="Industrial Hall Door">
+                </div>
+                <div class="gallery-card-content">
+                    <h3 class="gallery-card-title">VERTICAL CABLE ROUTING</h3>
+                    <p class="gallery-card-description">Vertical cable routing along the steel structure of the industrial hall. Cables for sectional gate, control units and auxiliary systems guided in protected conduits and cable trays. Designed for durability, easy maintenance and future expandability while maintaining clean, organized appearance on the structural framework.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">WANT TO SEE MORE?</h2>
+        <p class="cta-subtitle">Get in touch and I'll be happy to share additional project details and references.</p>
+        <a href="mailto:jobwithrobert.electric@gmail.com" class="btn-primary">
+            <span>Contact Me</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </section>
+
+    <footer>
+        <p class="footer-text">© 2025 Robert H.C. Seidel. Crafted with German precision.</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/robert-seidel-3b38991a0/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">✕</span>
+        <img src="" alt="Enlarged view">
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-logo">R.SEIDEL</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('hidden');
+            }, 1600);
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const galleryImages = document.querySelectorAll('.gallery-card-image img');
+
+        galleryImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
