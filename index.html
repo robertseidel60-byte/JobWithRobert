@@ -471,6 +471,7 @@ section {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .quick-link-card::before {
@@ -486,18 +487,41 @@ section {
     transition: transform 0.4s ease;
 }
 
+.quick-link-card::after {
+    content: '→';
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--accent-electric);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
 .quick-link-card:hover {
-    border-color: var(--border-accent);
-    transform: translateY(-5px);
+    border-color: var(--accent-electric);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,212,255,0.15);
 }
 
 .quick-link-card:hover::before {
     transform: scaleX(1);
 }
 
+.quick-link-card:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .quick-link-icon {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .quick-link-icon {
+    transform: scale(1.2);
 }
 
 .quick-link-card h3 {
@@ -506,11 +530,40 @@ section {
     color: var(--text-primary);
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.quick-link-card:hover h3 {
+    color: var(--accent-electric);
 }
 
 .quick-link-card p {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+.quick-link-hint {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-electric);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-link-hint svg {
+    width: 14px;
+    height: 14px;
+    animation: bounceRight 1.5s ease infinite;
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
 }
 
 /* CTA Section */
@@ -1179,11 +1232,11 @@ footer {
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="robert-seidel-cv.pdf" class="btn-secondary" download>
+                <a href="robert-seidel-resume.pdf" class="btn-secondary" download>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-right:0.5rem;">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                     </svg>
-                    Download CV
+                    Download Resume
                 </a>
                 <a href="projects.html" class="btn-secondary">View My Work</a>
             </div>
@@ -1222,16 +1275,34 @@ footer {
             <div class="quick-link-icon">⚡</div>
             <h3>Skills & Expertise</h3>
             <p>Electrical, PV, Automation, Smart Home</p>
+            <div class="quick-link-hint">
+                Click to explore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </div>
         </a>
         <a href="projects.html" class="quick-link-card">
             <div class="quick-link-icon">🔧</div>
             <h3>Projects</h3>
             <p>Industrial, Commercial, Residential</p>
+            <div class="quick-link-hint">
+                Click to explore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </div>
         </a>
         <a href="gallery.html" class="quick-link-card">
             <div class="quick-link-icon">📷</div>
             <h3>Photo Gallery</h3>
             <p>Real work, real results</p>
+            <div class="quick-link-hint">
+                Click to explore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </div>
         </a>
     </section>
 
@@ -1245,11 +1316,11 @@ footer {
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>
-            <a href="robert-seidel-cv.pdf" class="btn-secondary" download>
+            <a href="robert-seidel-resume.pdf" class="btn-secondary" download>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-right:0.5rem;">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
-                Download CV
+                Download Resume
             </a>
         </div>
         <div class="contact-info">
